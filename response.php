@@ -1,4 +1,6 @@
 <?php include "inc/header.php"?>
+<?php include "functions/functions.php"?>
+<?php createRows();?>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -18,14 +20,15 @@
 		  <div class="col-sm-12 parking-response">
 			  
 			  <div class="col-sm-12">
+			      <h5>You have to pay to park at these times:</h5>
 				  <ul>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
-					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: 8am-6pm</p></li>
+					  <li><p>Tuesday: 8am-6pm</p></li>
+					  <li><p>Wednesday: 8am-6pm</p></li>
+					  <li><p>Thursday: 8am-6pm</p></li>
+					  <li><p>Friday: 8am-6pm</p></li>
+					  <li><p>Saturday: 8am-6pm</p></li>
+					  <li><p>Sunday: 8am-6pm</p></li>
 				  </ul>
 				</div>
 		  </div>

@@ -1,7 +1,5 @@
 <?php include "inc/header.php" ?>
-
 <?php include "functions/functions.php"?>
-<?php createRows();?>
 
 <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -18,7 +16,7 @@
     </div>
     <div class="jumbotron text-center">
         <p class="lead">Enter the street address you are closest to</p>
-        <form method="post">
+        <form action="response.php" method="post">
             <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Street address...">
             <br/>
 

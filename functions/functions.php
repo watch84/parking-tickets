@@ -41,7 +41,7 @@ function createRows(){
         $zip = $_POST['zip'];
         
         date_default_timezone_set("America/New_York");
-        $date = date("Y-m-d h:i:sa");
+        $date = date("Y-m-d H:i:s");
         
         
         $query = "INSERT INTO searches(add_num, add_street, zip, lng, lat, date)";

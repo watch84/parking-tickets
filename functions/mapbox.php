@@ -22,10 +22,6 @@
         map.addLayer(
             <?php shapes();?>
         );
-        
-        map.addLayer(
-            <?php stops();?>
-        );
 
         var popup = new mapboxgl.Popup({
             closeButton: false,

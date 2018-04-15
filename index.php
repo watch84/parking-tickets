@@ -8,11 +8,12 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
-
+    
+	<link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+	
   </head>
   <body>
     <!--[if IE]>
@@ -21,22 +22,16 @@
     
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active">
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">Parking Rules</h3>
+        <a href="index.php">
+	        <h1 class="text-center">PARKING<br/>RULES</h1>
+        </a>
       </div>
       <div class="jumbotron text-center">
         <p class="lead">Enter the street address you're closest to</p>
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-		 <a class="btn btn-lg btn-success btn-default" type="button" href="response.php">Find Parking Rules!</a>
+		 <a class="btn btn-lg btn-default btn-primary" type="button" href="response.php">Find Parking Rules</a>
       </div>
 
       <div class="row marketing">

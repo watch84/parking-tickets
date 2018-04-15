@@ -1,20 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>parking tickets</title>
+<?php include "inc/header.php"?>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" href="css/main.css">
-    
-<link href="https://fonts.googleapis.com/css?family=Days+One|Maven+Pro:400,900" rel="stylesheet">	
-  </head>
-  <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,7 +18,7 @@
 		 <a class="btn btn-lg btn-default btn-primary" type="button" href="response.php">Get Parking Rules</a>
       </div>
 
-      <div class="row marketing">
+      <div class="row marketing text-center">
 
         <div class="col-lg-12">
           <h3>1. Enter the house number and street you're closest to</h3>

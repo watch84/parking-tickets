@@ -1,20 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>parking tickets</title>
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-    
-    <link rel="stylesheet" href="css/main.css">
-    
-<link href="https://fonts.googleapis.com/css?family=Days+One|Maven+Pro:400,900" rel="stylesheet">  </head>
-  <body>
+<?php include "inc/header.php"?>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,14 +9,25 @@
 	        <h3 class="text-muted text-center">PARKING RULES</h3>
         </a>
       </div>
-	  <div class="row text-center response-container">
-		  <div class="col-sm-12">
+	  <div class="row response-container">
+		  <div class="col-sm-12 text-center">
 		  	<h1> 123 Streetname </h1>
+		  	<div class="col-sm-12">The parking rules at your current location are:</div>
 		  </div>
 
 		  <div class="col-sm-12 parking-response">
-			  <div class="col-sm-12">The parking rules at your current location are:</div>
-			  <div class="col-sm-12"><p>NO PARKING<br/>8am-6pm<br/>Monday-Friday</p></div>
+			  
+			  <div class="col-sm-12">
+				  <ul>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+					  <li><p>Monday: NO PARKING 8am-6pm</p></li>
+				  </ul>
+				</div>
 		  </div>
 	  </div>
 	  <hr>

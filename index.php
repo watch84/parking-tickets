@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
     
-	<link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
-	
+<link href="https://fonts.googleapis.com/css?family=Days+One|Maven+Pro:400,900" rel="stylesheet">	
   </head>
   <body>
     <!--[if IE]>
@@ -31,26 +30,20 @@
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-		 <a class="btn btn-lg btn-default btn-primary" type="button" href="response.php">Find Parking Rules</a>
+		 <a class="btn btn-lg btn-default btn-primary" type="button" href="response.php">Get Parking Rules</a>
       </div>
 
       <div class="row marketing">
-	    <div class="col-lg-12">
-		    <h2> How it Works</h2>
-	    </div>  
-	    <hr>
+
         <div class="col-lg-12">
-          <h4>1. Enter the house number and street you're closest to</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+          <h3>1. Enter the house number and street you're closest to</h3>
 
-          <h4>2. Get the parking rules at your location</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+          <h3>2. View the parking rules at your location</h3>
 
-          <h4>3. Park with confidence</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+          <h3>3. Park with confidence</h3>
         </div>
       </div>
-
+	  <br/><br/><br/>
       <div class="footer">
         <p>♥ from IHIutch, TommyCreenan, Watch84</p>
       </div>

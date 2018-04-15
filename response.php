@@ -13,9 +13,7 @@
     
     <link rel="stylesheet" href="css/main.css">
     
-    <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
-
-  </head>
+<link href="https://fonts.googleapis.com/css?family=Days+One|Maven+Pro:400,900" rel="stylesheet">  </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -43,7 +41,7 @@
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-	    <button class="btn btn-lg btn-default btn-primary" type="button">Find Parking Rules</button>
+	    <button class="btn btn-lg btn-default btn-primary" type="button">Get Parking Rules</button>
       </div>
       
       <div class="footer">

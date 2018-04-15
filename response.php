@@ -8,9 +8,10 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <link rel="stylesheet" href="css/main.css">
 
   </head>
   <body>
@@ -22,7 +23,7 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
             <a href="#">About</a>
@@ -44,32 +45,28 @@
 	  <hr>
       <div class="jumbotron text-center">
         <p class="lead">Enter another street address</p>
-	    <input type="text" class="form-control" placeholder="House number and street name...">
-	    <br/>
-	    <button class="btn btn-lg btn-success btn-default" type="button">Find Parking Rules!</button>
-      </div>
-
-      <div class="row marketing">
-	    <div class="col-lg-12">
-		    <h2> How it Works</h2>
-	    </div>  
-	    <hr>
-        <div class="col-lg-12">
-          <h4>1. Enter the house number and street you're closest to</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>2. Get the parking rules at your location</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>3. Park with confidence</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-        </div>
-      </div>
-      <div class="jumbotron">
-        <p class="lead">Enter the street address you're closest to</p>
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
+	    <button class="btn btn-lg btn-success btn-default" type="button">Find Parking Rules!</button>
+      </div>
+      
+      <div class="footer">
+        <p>♥ from IHIutch, TommyCreenan, Watch84</p>
+      </div>
+    </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    
+     
 
  
     <script>
@@ -143,42 +140,6 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1hgyqHWtrkaolwztdX5G_nc2nFdFgyis&libraries=places&callback=initAutocomplete"
         async defer></script>
-	     
-	    
-	    <a class="btn btn-lg btn-success btn-default" type="button" href="response.html">Find Parking Rules!</a>
-      </div>
-
-      <div class="row marketing">
-	    <div class="col-lg-12">
-		    <h2> How it Works</h2>
-	    </div>  
-	    <hr>
-        <div class="col-lg-12">
-          <h4>1. Enter the house number and street you're closest to</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>2. Get the parking rules at your location</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>3. Park with confidence</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>♥ from IHIutch, TommyCreenan, Watch84</p>
-      </div>
-    </div>
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
 
   </body>

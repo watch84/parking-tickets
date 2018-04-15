@@ -21,7 +21,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active">
+          <li>
             <a href="index.html">Home</a>
           </li>
           <li>
@@ -42,7 +42,7 @@
 		  </div>
 	  </div>
 	  <hr>
-      <div class="jumbotron">
+      <div class="jumbotron text-center">
         <p class="lead">Enter another street address</p>
 	    <input type="text" class="form-control" placeholder="House number and street name...">
 	    <br/>

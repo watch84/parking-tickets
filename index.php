@@ -30,16 +30,11 @@
         </ul>
         <h3 class="text-muted">Parking Rules</h3>
       </div>
-
-      <div class="jumbotron">
+      <div class="jumbotron text-center">
         <p class="lead">Enter the street address you're closest to</p>
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-	    
-	    
-	   
-
 
  
     <script>

@@ -1,5 +1,4 @@
 <?php include "inc/header.php"?>
-<?php include "functions/functions.php"?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-8 max-height px-0">

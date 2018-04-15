@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
     
-	<link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Days+One|Maven+Pro:400,900" rel="stylesheet"> 
 	
   </head>
   <body>

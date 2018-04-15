@@ -29,9 +29,9 @@
         </div>
       </div>
 	  <br/><br/><br/>
-      <div class="footer">
-        <p>♥ from IHIutch, TommyCreenan, Watch84</p>
-      </div>
+
+<?php include "inc/header.php"?>
+
     </div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

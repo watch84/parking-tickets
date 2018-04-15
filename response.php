@@ -7,20 +7,11 @@
     <title>parking tickets</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
   </head>
   <body>
     <!--[if IE]>
@@ -30,7 +21,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active">
+          <li>
             <a href="index.html">Home</a>
           </li>
           <li>
@@ -39,16 +30,46 @@
         </ul>
         <h3 class="text-muted">Parking Rules</h3>
       </div>
+	  <div class="row text-center">
+		  <div class="col-sm-12">
+		  	<h1> 123 Streetname </h1>
+		  </div>
+		  <div class="col-sm-12">
+			  <div class="col-sm-12">The parking rules at your current location are:</div>
+		  </div>
+		  <div class="col-sm-12">
+			  <div class="col-sm-12"><p class="parking-response">NO PARKING 8am-6pm Monday-Friday</p></div>
+		  </div>
+	  </div>
+	  <hr>
+      <div class="jumbotron text-center">
+        <p class="lead">Enter another street address</p>
+	    <input type="text" class="form-control" placeholder="House number and street name...">
+	    <br/>
+	    <button class="btn btn-lg btn-success btn-default" type="button">Find Parking Rules!</button>
+      </div>
 
+      <div class="row marketing">
+	    <div class="col-lg-12">
+		    <h2> How it Works</h2>
+	    </div>  
+	    <hr>
+        <div class="col-lg-12">
+          <h4>1. Enter the house number and street you're closest to</h4>
+          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+
+          <h4>2. Get the parking rules at your location</h4>
+          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+
+          <h4>3. Park with confidence</h4>
+          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+        </div>
+      </div>
       <div class="jumbotron">
         <p class="lead">Enter the street address you're closest to</p>
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-	    
-	    
-	   
-
 
  
     <script>
@@ -159,30 +180,7 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+
   </body>
 </html>
+

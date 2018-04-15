@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     
     <link rel="stylesheet" href="css/main.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
 
   </head>
   <body>
@@ -21,25 +23,18 @@
     
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li>
-            <a href="index.php">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">Parking Rules</h3>
+        <a href="index.php">
+	        <h3 class="text-muted text-center">PARKING RULES</h3>
+        </a>
       </div>
-	  <div class="row text-center">
+	  <div class="row text-center response-container">
 		  <div class="col-sm-12">
 		  	<h1> 123 Streetname </h1>
 		  </div>
-		  <div class="col-sm-12">
+
+		  <div class="col-sm-12 parking-response">
 			  <div class="col-sm-12">The parking rules at your current location are:</div>
-		  </div>
-		  <div class="col-sm-12">
-			  <div class="col-sm-12"><p class="parking-response">NO PARKING 8am-6pm Monday-Friday</p></div>
+			  <div class="col-sm-12"><p>NO PARKING<br/>8am-6pm<br/>Monday-Friday</p></div>
 		  </div>
 	  </div>
 	  <hr>
@@ -48,7 +43,7 @@
 	    <input type="text" class="form-control" id="autocomplete"
              onFocus="geolocate()" placeholder="Street address...">
 	    <br/>
-	    <button class="btn btn-lg btn-success btn-default" type="button">Find Parking Rules!</button>
+	    <button class="btn btn-lg btn-default btn-primary" type="button">Find Parking Rules</button>
       </div>
       
       <div class="footer">

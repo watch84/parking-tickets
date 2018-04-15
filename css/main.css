@@ -1,6 +1,39 @@
 
+h1, h2, h3, h4, h5, h6{
+	
+	font-family: 'Days One', sans-serif;
+	color:#000;
+}
+
+p{
+}
+
+.response-container{
+	padding:60px 0px;
+}
 
 .parking-response{
-	color:red;
-	font-size: 30px;
+	    padding: 40px 0px 0px;
+}
+
+.parking-response p{
+	color: #00ccff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn-primary{
+	background:#00ccff !important;
+	border:0px;
+	text-shadow: none;
+	font-family: 'Days One', sans-serif;
+}
+
+
+
+.container .jumbotron, .container-fluid .jumbotron{
+	border-radius: 0px;
+	padding:40px 30px;
+	background-color: #f7f7f7;
+	box-shadow: 0px 20px 30px -10px #b1b1b1;
 }

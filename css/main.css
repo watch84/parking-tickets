@@ -13,6 +13,10 @@ ul{
 	list-style: none;
 }
 
+.header h1{
+	padding:70px 0px;
+}
+
 .response-container{
 	padding:30px 0px 30px;
 }
@@ -30,6 +34,7 @@ ul{
 .btn-primary{
 	background:#00ccff !important;
 	border:0px;
+	font-size: 22px;
 	text-shadow: none;
 	font-family: 'Days One', sans-serif;
 }

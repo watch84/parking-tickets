@@ -8,7 +8,7 @@
 <div class="container">
     <div class="header">
         <a href="index.php">
-            <h1 class="text-center">PARKING<br/>RULES</h1>
+            <h1 class="text-center">PARK BFLO</h1>
         </a>
         <div class="float-right">
             <a href="requests.php">All Requests</a>

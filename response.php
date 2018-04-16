@@ -8,7 +8,7 @@
     <div class="container">
       <div class="header">
         <a href="index.php">
-	        <h3 class="text-muted text-center">PARKING RULES</h3>
+	        <h3 class="text-muted text-center">PARK BFLO</h3>
         </a>
       </div>
 	  <div class="row response-container">

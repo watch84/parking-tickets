@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>parking tickets</title>
+    <title>PARK BFLO</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>

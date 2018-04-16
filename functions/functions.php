@@ -1,5 +1,5 @@
 <?php 
-include "db/db.php";
+include(__DIR__.'/../db/db.php');
 
 function geocoder(){
     global $con;

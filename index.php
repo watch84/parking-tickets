@@ -8,24 +8,24 @@
 <div class="container">
     <div class="header">
         <a href="index.php">
-            <h1 class="text-center">PARK BFLO</h1>
+            <h1 class="text-center">PARK BFLO .COM</h1>
         </a>
-        <div class="float-right">
-            <a href="requests.php">All Requests</a>
-        </div>
     </div>
+    
     <div class="jumbotron text-center">
         <p class="lead">Enter the street address you are closest to</p>
         <form action="response.php" method="post">
             <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Street address...">
             <br/>
 
+<!--
             <div class="col-6">
                 <label>Street Address</label>
                 <input class="field" id="street_number" name="add_num" disabled="true">
                 <input class="field" id="route" name="add_street" disabled="true">
                 <input class="field" id="postal_code" name="zip" disabled="true">
             </div>
+-->
             <input class="btn btn-primary" type="submit" name="submit" value="Get Parking Rules">
             <div class="col-6"></div>
             <div class="col-6"></div>
@@ -34,44 +34,37 @@
 
 
     </div>
-    <table id="">
-        <tr>
-            <td class="label">Street address</td>
-            <td class="slimField"><input class="field" id="street_number" name="add_number" disabled="true"></td>
-            <td class="wideField" colspan="2"><input class="field" id="route" name="add_street" disabled="true"></td>
-        </tr>
-        <tr>
-            <td class="label">City</td>
-            <!-- Note: Selection of address components in this example is typical.
-               You may need to adjust it for the locations relevant to your app. See
-               https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-          -->
-            <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"></td>
-        </tr>
-        <tr>
-            <td class="label">State</td>
-            <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"></td>
-            <td class="label">Zip code</td>
-            <td class="wideField"><input class="field" id="postal_code" disabled="true"></td>
-        </tr>
-        <tr>
-            <td class="label">Country</td>
-            <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"></td>
-        </tr>
-    </table>
-
-
-    <div class="row marketing text-center">
-
+	<div class="row marketing">
         <div class="col-lg-12">
-            <h3>1. Enter the house number and street you're closest to</h3>
-
-            <h3>2. View the parking rules at your location</h3>
-
-            <h3>3. Park with confidence</h3>
+	        <table id="">
+		        <tr>
+		            <td class="label">Street address</td>
+		            <td class="slimField"><input class="field" id="street_number" name="add_number" disabled="true"></td>
+		            <td class="wideField" colspan="2"><input class="field" id="route" name="add_street" disabled="true"></td>
+		        </tr>
+		        <tr>
+		            <td class="label">City</td>
+		            <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"></td>
+		        </tr>
+		        <tr>
+		            <td class="label">State</td>
+		            <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"></td>
+		            <td class="label">Zip code</td>
+		            <td class="wideField"><input class="field" id="postal_code" disabled="true"></td>
+		        </tr>
+		        <tr>
+		            <td class="label">Country</td>
+		            <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"></td>
+		        </tr>
+		    </table>
         </div>
     </div>
-    <br/><br/><br/>
+	
+	<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX_Rrz1sS04kR6EyJMWrLOfE&key=AIzaSyD5ttKC3CD6Z-o2pe96glix5xas4qSHfCQ" allowfullscreen></iframe>   
+	 
+	<div class="float-right">
+	    <a href="requests.php">All Requests</a>
+	</div>
 
 
 </div>
@@ -101,7 +94,7 @@
 
     // This example requires the Places library. Include the libraries=places
     // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1hgyqHWtrkaolwztdX5G_nc2nFdFgyis&libraries=places">
 
     var placeSearch, autocomplete;
     var componentForm = {

@@ -45,7 +45,7 @@ function createRows(){
         
         
         $query = "INSERT INTO searches(add_num, add_street, zip, lng, lat, date)";
-        $query .= " VALUES ('$add_num', '$add_street', $zip, '$lng', '$lat', '$date')"; 
+        $query .= " VALUES ('$add_num', '$add_street', '$zip', '$lng', '$lat', '$date')"; 
 
         $result = mysqli_query($con, $query);
 

@@ -18,14 +18,13 @@
             <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Street address...">
             <br/>
 
-<!--
             <div class="col-6">
                 <label>Street Address</label>
                 <input class="field" id="street_number" name="add_num" disabled="true">
                 <input class="field" id="route" name="add_street" disabled="true">
                 <input class="field" id="postal_code" name="zip" disabled="true">
             </div>
--->
+            
             <input class="btn btn-primary" type="submit" name="submit" value="Get Parking Rules">
             <div class="col-6"></div>
             <div class="col-6"></div>

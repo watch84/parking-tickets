@@ -178,7 +178,4 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1hgyqHWtrkaolwztdX5G_nc2nFdFgyis&libraries=places&callback=initAutocomplete" async defer></script>
 
-
-</body>
-
-</html>
+<?php include "inc/footer.php"?>

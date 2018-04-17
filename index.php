@@ -7,25 +7,26 @@
 
 <div class="container">
     <div class="header">
-        <a href="index.php">
-            <h1 class="text-center">PARK BFLO .COM</h1>
+        <a href="/">
+            <!-- <h1 class="text-center">PARK BFLO .COM</h1> -->
+            <img class="logo" src="/img/logo.svg" alt="">
         </a>
     </div>
-    
+
     <div class="jumbotron text-center">
         <p class="lead">Enter the street address you are closest to</p>
         <form action="response.php" method="post">
             <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Street address...">
             <br/>
 
-            <div class="col-6">
+            <div class="col-12">
                 <label>Street Address</label>
-                <input class="field" id="street_number" name="add_num" disabled="true">
-                <input class="field" id="route" name="add_street" disabled="true">
-                <input class="field" id="postal_code" name="zip" disabled="true">
+                <input class="d-inline-block field" id="street_number" name="add_num" disabled="true">
+                <input class="d-inline-block field" id="route" name="add_street" disabled="true">
+                <input class="d-inline-block field" id="postal_code" name="zip" disabled="true">
             </div>
-            
-            <input class="btn btn-primary" type="submit" name="submit" value="Get Parking Rules">
+
+            <input class="btn btn-primary mt-5" type="submit" name="submit" value="Get Parking Rules">
             <div class="col-6"></div>
             <div class="col-6"></div>
             <div class="col-6"></div>
@@ -33,7 +34,8 @@
 
 
     </div>
-	<div class="row marketing">
+
+	<div class="row marketing d-none">
         <div class="col-lg-12">
 	        <table id="">
 		        <tr>
@@ -58,9 +60,9 @@
 		    </table>
         </div>
     </div>
-	
-	<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX_Rrz1sS04kR6EyJMWrLOfE&key=AIzaSyD5ttKC3CD6Z-o2pe96glix5xas4qSHfCQ" allowfullscreen></iframe>   
-	 
+
+	<!-- <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX_Rrz1sS04kR6EyJMWrLOfE&key=AIzaSyD5ttKC3CD6Z-o2pe96glix5xas4qSHfCQ" allowfullscreen></iframe>    -->
+
 	<div class="float-right">
 	    <a href="requests.php">All Requests</a>
 	</div>

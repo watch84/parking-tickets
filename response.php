@@ -4,11 +4,11 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div class="container">
       <div class="header">
-        <a href="index.php">
-	        <h3 class="text-muted text-center">PARK BFLO</h3>
+        <a href="/">
+	        <img class="logo" src="/img/logo.svg" alt="">
         </a>
       </div>
 	  <div class="row response-container">
@@ -18,8 +18,21 @@
 		  </div>
 
 		  <div class="col-sm-12 parking-response">
-			  
+
 			  <div class="col-sm-12">
+          <?php
+          ini_set('display_errors', 1);
+          ini_set('display_startup_errors', 1);
+          error_reporting(E_ALL);
+
+          $fetch = mysqli_query($con, "SELECT * FROM streetname");
+
+          $array = array();
+          while($row = mysqli_fetch_assoc($fetch)){
+              $array[] = $row;
+          }
+          ?>
+
 			      <h5>You have to pay to park at these times:</h5>
 				  <ul>
 					  <li><p>Monday: 8am-6pm</p></li>
@@ -41,12 +54,12 @@
 	    <br/>
 	    <button class="btn btn-lg btn-default btn-primary" type="button">Get Parking Rules</button>
       </div>
-      
+
       <div class="footer">
         <p>♥ from IHIutch, TommyCreenan, Watch84</p>
       </div>
     </div>
-    
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -56,10 +69,10 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-    
-     
 
- 
+
+
+
     <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
@@ -128,7 +141,7 @@
         }
       }
     </script>
-    
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1hgyqHWtrkaolwztdX5G_nc2nFdFgyis&libraries=places&callback=initAutocomplete"
         async defer></script>
 

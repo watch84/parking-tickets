@@ -25,12 +25,20 @@
           ini_set('display_startup_errors', 1);
           error_reporting(E_ALL);
 
-          $fetch = mysqli_query($con, "SELECT * FROM streetname");
+          $fetch = "SELECT * FROM parkingtimes";
 
-          $array = array();
-          while($row = mysqli_fetch_assoc($fetch)){
-              $array[] = $row;
+          $result = $con->query($fetch);
+
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                  echo "id: " . $row["id"]. " - streetname: " . $row["streetname"]. "parking_time: " . $row["parking_time"]. "<br>";
+              }
+          } else {
+              echo "No Results.";
           }
+
+          $con->close();
           ?>
 
 			      <h5>You have to pay to park at these times:</h5>

@@ -32,7 +32,22 @@
           if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-                  echo "id: " . $row["id"]. " - streetname: " . $row["streetname"]. "parking_time: " . $row["parking_time"]. "<br>";
+                  $today = date("D");
+
+                  $street = $row["streetname"];
+                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
+
+                  $string = $row["parking_time"];
+                  $json = json_decode($string, true);
+
+                  echo $street. "<br>";
+                  echo $today. "<br>";
+                  // print_r($json);
+                  if (is_array($json)[$today]) {
+                    foreach ($json[$today] as $t) {
+                      echo "Start Time:". $t['mintime'] ."\n";
+                    };
+                  }
               }
           } else {
               echo "No Results.";

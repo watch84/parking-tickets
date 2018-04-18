@@ -25,7 +25,7 @@
           ini_set('display_startup_errors', 1);
           error_reporting(E_ALL);
 
-          $fetch = "SELECT * FROM parkingtimes";
+          $fetch = "SELECT * FROM parking_times";
 
           $result = $con->query($fetch);
 
@@ -154,6 +154,6 @@
         async defer></script>
 
 
-  </body>
-</html>
 
+
+<?php include "inc/footer.php"?>

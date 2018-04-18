@@ -27,9 +27,6 @@
             </div>
 
             <input class="btn btn-primary mt-5" type="submit" name="submit" value="Get Parking Rules">
-            <div class="col-6"></div>
-            <div class="col-6"></div>
-            <div class="col-6"></div>
         </form>
 
 
@@ -108,8 +105,8 @@
     };
 
     var defaultBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(42.8864, 78.8784),
-        new google.maps.LatLng(42.8864, 78.8784));
+        new google.maps.LatLng(42.952523, -78.932614),
+        new google.maps.LatLng(42.815877, -78.781552));
 
     function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical

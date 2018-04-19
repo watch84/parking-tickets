@@ -35,6 +35,7 @@
 				  <li><p>Friday: 8am-6pm</p></li>
 				  <li><p>Saturday: 8am-6pm</p></li>
 				  <li><p>Sunday: 8am-6pm</p></li>
+<!--
 				  
 				  <select>
 					  <option>English &#8675;</option>
@@ -44,7 +45,14 @@
 					  <option>Arabic</option>
 					  <option>Nepali</option>
 				  </select>
-				  
+-->
+				  <div id="google_translate_element"></div>
+				  <script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+					}
+					</script>
+					<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 				</ul>
 				
 				
@@ -94,17 +102,9 @@
 			   </div>
 		  </div>
 	  </div>
-	  <hr>
-      <div class="jumbotron text-center">
-        <p class="lead">Enter another street address</p>
-	    <input type="text" class="form-control" id="autocomplete"
-             onFocus="geolocate()" placeholder="Street address...">
-	    <br/>
-	    <button class="btn btn-lg btn-default btn-primary" type="button">Get Parking Rules</button>
-      </div>
-
+	 
       <div class="footer">
-        <p>♥ from IHIutch, TommyCreenan, Watch84</p>
+        
       </div>
     </div>
 

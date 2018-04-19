@@ -1,5 +1,16 @@
 <?php include "inc/header.php" ?>
 
+<style>
+.navbar-brand img {
+    display: none;
+    max-width: 300px;
+    margin: 130px auto 0px;
+}
+
+.logo{
+	padding: 20px 33px 50px;
+}
+</style>
 
 <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -7,16 +18,15 @@
 
 <div class="container">
     <div class="header">
-        <a href="/">
-            <!-- <h1 class="text-center">PARK BFLO .COM</h1> -->
-            <img class="logo" src="/img/logo.svg" alt="">
-        </a>
+
+            <img class="logo" src="/img/logo.svg" alt="Park Buffalo">
+
     </div>
 
     <div class="jumbotron text-center">
-        <p class="lead">Enter the street address of the side of the street you're on. <br/> We'll look at City Data to calculate the rules for your location.</p>
+        <p class="lead">Enter the street address of the side of the street you're on. <br/> <br/> We'll look at Buffalo City Data to calculate the rules for your location.</p>
         <form action="response.php" method="post">
-            <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Enter street address closest to you...">
+            <input type="text" autofocus class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Enter street address closest to you...">
             <br/>
 
             <div class="col-12 storedfields">
@@ -60,9 +70,6 @@
 
 	<!-- <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX_Rrz1sS04kR6EyJMWrLOfE&key=AIzaSyD5ttKC3CD6Z-o2pe96glix5xas4qSHfCQ" allowfullscreen></iframe>    -->
 
-	<div class="float-right">
-	    <a href="requests.php">All Requests</a>
-	</div>
 
 
 </div>

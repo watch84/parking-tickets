@@ -175,3 +175,17 @@ input.form-control{
     padding: 10px;
     display: block;
 }
+
+.mapboxgl-popup-content{
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip{
+    border-top-color: rgba(0,0,0,0.8);
+}
+
+.mapboxgl-popup-close-button{
+    color: #fff;
+}

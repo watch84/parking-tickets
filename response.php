@@ -35,6 +35,16 @@
 				  <li><p>Friday: 8am-6pm</p></li>
 				  <li><p>Saturday: 8am-6pm</p></li>
 				  <li><p>Sunday: 8am-6pm</p></li>
+				  
+				  <select>
+					  <option>English &#8675;</option>
+					  <option>Spanish</option>
+					  <option>Burmese</option>
+					  <option>Karen</option>
+					  <option>Arabic</option>
+					  <option>Nepali</option>
+				  </select>
+				  
 				</ul>
 				
 				

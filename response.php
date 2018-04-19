@@ -15,7 +15,9 @@
       </div>
 	  <div class="row response-container">
 		  <div class="col-sm-12">
-		  	<h1 class="street-message">640 Ellicott St.</h1>
+		  
+		  
+		  	<h1 class="street-message"><?php echo $_POST['add_num'] . ' ' . $_POST['add_street']?></h1>
 <!-- 		  	<div class="col-sm-12">The parking rules at your current location are:</div> -->
 		  </div>
 		  <div class="col-sm-12">
@@ -32,30 +34,30 @@
 		          $fetch = "SELECT * FROM parking_times";
 		
 		          $result = $con->query($fetch);
-                    $add_street = $_POST['add_street'];
-                      $arr = strtolower(explode(' ',trim($add_street))[0]);
+                  $add_street = $_POST['add_street'];
+                  $street = strtolower(preg_replace('/\W\w+\s*(\W*)$/', '$1', $add_street));
+
                   while($row = $result->fetch_assoc()) {
-                      
                       
                       $streetname = strtolower($row['streetname']);
                       
-                      if($arr == $streetname){
+                      if($street == $streetname){
                           $times = $row['parking_time'];
                           $untimes = json_decode($times,true);
 //    
                           ?>
                           <ul>
-				  <li><p>Monday: <?php echo $untimes['Mon']['mintime']?>- <?php echo $untimes['Mon']['maxtime']?></p></li>
-				  <li><p>Tuesday: <?php echo $untimes['Tue']['mintime']?>- <?php echo $untimes['Tue']['maxtime']?></p></li>
-				  <li><p>Wednesday: <?php echo $untimes['Wed']['mintime']?>- <?php echo $untimes['Wed']['maxtime']?></p></li>
+				  <li><p>Monday: <?php echo date("g:i a", strtotime($untimes['Mon']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Mon']['maxtime']))?></p></li>
+				  <li><p>Tuesday: <?php echo date("g:i a", strtotime($untimes['Tue']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Tue']['maxtime']))?></p></li>
+				  <li><p>Wednesday: <?php echo date("g:i a", strtotime($untimes['Wed']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Wed']['maxtime']))?></p></li>
 				  <li class="current-rule-container">
-				  	<p class="current-rule">Thursday: <?php echo $untimes['Thu']['mintime']?>- <?php echo $untimes['Thu']['maxtime']?></p>
+				  	<p class="current-rule">Thursday: <?php echo date("g:i a", strtotime($untimes['Thu']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Thu']['maxtime']))?></p>
 				  	<p class="rule-support">It's currently Thursday at 3:47 PM.</p>
 				  </li>
-				  <li><p>Friday: <?php echo $untimes['Fri']['mintime']?>- <?php echo $untimes['Fri']['maxtime']?></p></li>
-				  <li><p>Saturday: <?php echo $untimes['Sat']['mintime']?>- <?php echo $untimes['Sat']['maxtime']?></p></li>
-				  <li><p>Sunday: <?php echo $untimes['Sun']['mintime']?>- <?php echo $untimes['Sun']['maxtime']?></p></li>
-              </ul>
+				  <li><p>Friday: <?php echo date("g:i a", strtotime($untimes['Fri']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Fri']['maxtime']))?></p></li>
+				  <li><p>Saturday: <?php echo date("g:i a", strtotime($untimes['Sat']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Sat']['maxtime']))?></p></li>
+				  <li><p>Sunday: <?php echo date("g:i a", strtotime($untimes['Sun']['mintime']))?> - <?php echo date("g:i a", strtotime($untimes['Sun']['maxtime']))?></p></li>
+                          </ul>
                          <?php
                       }
                   }

@@ -19,7 +19,7 @@
 <div class="container">
     <div class="header">
 
-            <img class="logo" src="/img/logo.svg" alt="Park Buffalo">
+            <img class="logo" src="img/logo.svg" alt="Park Buffalo">
 
     </div>
 

@@ -24,17 +24,69 @@
 <!-- .message-good on co	PARKING AVAILABLE -->
 					NO PARKING
 				</p>
-				<ul>
-				  <li><p>Monday: 8am-6pm</p></li>
-				  <li><p>Tuesday: 8am-6pm</p></li>
-				  <li><p>Wednesday: 8am-6pm</p></li>
+				<?php
+		          ini_set('display_errors', 1);
+		          ini_set('display_startup_errors', 1);
+		          error_reporting(E_ALL);
+		
+		          $fetch = "SELECT * FROM parking_times";
+		
+		          $result = $con->query($fetch);
+                    $add_street = $_POST['add_street'];
+                      $arr = strtolower(explode(' ',trim($add_street))[0]);
+                  while($row = $result->fetch_assoc()) {
+                      
+                      
+                      $streetname = strtolower($row['streetname']);
+                      
+                      if($arr == $streetname){
+                          $times = $row['parking_time'];
+                          $untimes = json_decode($times,true);
+//    
+                          ?>
+                          <ul>
+				  <li><p>Monday: <?php echo $untimes['Mon']['mintime']?>- <?php echo $untimes['Mon']['maxtime']?></p></li>
+				  <li><p>Tuesday: <?php echo $untimes['Tue']['mintime']?>- <?php echo $untimes['Tue']['maxtime']?></p></li>
+				  <li><p>Wednesday: <?php echo $untimes['Wed']['mintime']?>- <?php echo $untimes['Wed']['maxtime']?></p></li>
 				  <li class="current-rule-container">
-				  	<p class="current-rule">Thursday: 8am-6pm</p>
+				  	<p class="current-rule">Thursday: <?php echo $untimes['Thu']['mintime']?>- <?php echo $untimes['Thu']['maxtime']?></p>
 				  	<p class="rule-support">It's currently Thursday at 3:47 PM.</p>
 				  </li>
-				  <li><p>Friday: 8am-6pm</p></li>
-				  <li><p>Saturday: 8am-6pm</p></li>
-				  <li><p>Sunday: 8am-6pm</p></li>
+				  <li><p>Friday: <?php echo $untimes['Fri']['mintime']?>- <?php echo $untimes['Fri']['maxtime']?></p></li>
+				  <li><p>Saturday: <?php echo $untimes['Sat']['mintime']?>- <?php echo $untimes['Sat']['maxtime']?></p></li>
+				  <li><p>Sunday: <?php echo $untimes['Sun']['mintime']?>- <?php echo $untimes['Sun']['maxtime']?></p></li>
+              </ul>
+                         <?php
+                      }
+                  }
+                  
+		
+//		          if ($result->num_rows > 0) {
+//		              // output data of each row
+//		              while($row = $result->fetch_assoc()) {
+//		                  $today = date("D");
+//		
+//		                  $street = $row["streetname"];
+//		                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
+//		
+//		                  $string = $row["parking_time"];
+//		                  $json = json_decode($string, true);
+//		
+//		                  echo $street. "<br>";
+//		                  echo $today. "<br>";
+//		                  // print_r($json);
+//		                  if (is_array($json)[$today]) {
+//		                    foreach ($json[$today] as $t) {
+//		                      echo "Start Time:". $t['mintime'] ."\n";
+//		                    };
+//		                  }
+//		              }
+//		          } else {
+//		              echo "No Results.";
+//		          }
+		
+		          $con->close();
+		          ?>
 <!--
 				  
 				  <select>
@@ -53,7 +105,6 @@
 					}
 					</script>
 					<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-				</ul>
 				
 				
 		  </div>
@@ -63,41 +114,6 @@
 		  <div class="col-sm-12 parking-response">
 
 			  <div class="col-sm-12">
-		          <?php
-		          ini_set('display_errors', 1);
-		          ini_set('display_startup_errors', 1);
-		          error_reporting(E_ALL);
-		
-		          $fetch = "SELECT * FROM parking_times";
-		
-		          $result = $con->query($fetch);
-		
-		          if ($result->num_rows > 0) {
-		              // output data of each row
-		              while($row = $result->fetch_assoc()) {
-		                  $today = date("D");
-		
-		                  $street = $row["streetname"];
-		                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
-		
-		                  $string = $row["parking_time"];
-		                  $json = json_decode($string, true);
-		
-		                  echo $street. "<br>";
-		                  echo $today. "<br>";
-		                  // print_r($json);
-		                  if (is_array($json)[$today]) {
-		                    foreach ($json[$today] as $t) {
-		                      echo "Start Time:". $t['mintime'] ."\n";
-		                    };
-		                  }
-		              }
-		          } else {
-		              echo "No Results.";
-		          }
-		
-		          $con->close();
-		          ?>
 
 			   </div>
 		  </div>

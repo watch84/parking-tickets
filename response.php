@@ -7,66 +7,81 @@
 
     <div class="container">
       <div class="header">
+<!--
         <a href="/">
 	        <img class="logo" src="/img/logo.svg" alt="">
         </a>
+-->
       </div>
 	  <div class="row response-container">
-		  <div class="col-sm-12 text-center">
-		  	<h1> 123 Streetname </h1>
-		  	<div class="col-sm-12">The parking rules at your current location are:</div>
+		  <div class="col-sm-12">
+		  	<h1 class="street-message">640 Ellicott St.</h1>
+<!-- 		  	<div class="col-sm-12">The parking rules at your current location are:</div> -->
 		  </div>
-
+		  <div class="col-sm-12">
+	
+				<p class="message">
+<!-- .message-good on co	PARKING AVAILABLE -->
+					NO PARKING
+				</p>
+				<ul>
+				  <li><p>Monday: 8am-6pm</p></li>
+				  <li><p>Tuesday: 8am-6pm</p></li>
+				  <li><p>Wednesday: 8am-6pm</p></li>
+				  <li class="current-rule-container">
+				  	<p class="current-rule">Thursday: 8am-6pm</p>
+				  	<p class="rule-support">It's currently Thursday at 3:47 PM.</p>
+				  </li>
+				  <li><p>Friday: 8am-6pm</p></li>
+				  <li><p>Saturday: 8am-6pm</p></li>
+				  <li><p>Sunday: 8am-6pm</p></li>
+				</ul>
+				
+				
+		  </div>
+		  <div class="col-sm-12">
+			  <p class="notice">All calculations have been made using summons data collected during parking violations. Park smarter.</p>
+		  </div>
 		  <div class="col-sm-12 parking-response">
 
 			  <div class="col-sm-12">
-          <?php
-          ini_set('display_errors', 1);
-          ini_set('display_startup_errors', 1);
-          error_reporting(E_ALL);
+		          <?php
+		          ini_set('display_errors', 1);
+		          ini_set('display_startup_errors', 1);
+		          error_reporting(E_ALL);
+		
+		          $fetch = "SELECT * FROM parking_times";
+		
+		          $result = $con->query($fetch);
+		
+		          if ($result->num_rows > 0) {
+		              // output data of each row
+		              while($row = $result->fetch_assoc()) {
+		                  $today = date("D");
+		
+		                  $street = $row["streetname"];
+		                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
+		
+		                  $string = $row["parking_time"];
+		                  $json = json_decode($string, true);
+		
+		                  echo $street. "<br>";
+		                  echo $today. "<br>";
+		                  // print_r($json);
+		                  if (is_array($json)[$today]) {
+		                    foreach ($json[$today] as $t) {
+		                      echo "Start Time:". $t['mintime'] ."\n";
+		                    };
+		                  }
+		              }
+		          } else {
+		              echo "No Results.";
+		          }
+		
+		          $con->close();
+		          ?>
 
-          $fetch = "SELECT * FROM parking_times";
-
-          $result = $con->query($fetch);
-
-          if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_assoc()) {
-                  $today = date("D");
-
-                  $street = $row["streetname"];
-                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
-
-                  $string = $row["parking_time"];
-                  $json = json_decode($string, true);
-
-                  echo $street. "<br>";
-                  echo $today. "<br>";
-                  // print_r($json);
-                  if (is_array($json)[$today]) {
-                    foreach ($json[$today] as $t) {
-                      echo "Start Time:". $t['mintime'] ."\n";
-                    };
-                  }
-              }
-          } else {
-              echo "No Results.";
-          }
-
-          $con->close();
-          ?>
-
-			      <h5>You have to pay to park at these times:</h5>
-				  <ul>
-					  <li><p>Monday: 8am-6pm</p></li>
-					  <li><p>Tuesday: 8am-6pm</p></li>
-					  <li><p>Wednesday: 8am-6pm</p></li>
-					  <li><p>Thursday: 8am-6pm</p></li>
-					  <li><p>Friday: 8am-6pm</p></li>
-					  <li><p>Saturday: 8am-6pm</p></li>
-					  <li><p>Sunday: 8am-6pm</p></li>
-				  </ul>
-				</div>
+			   </div>
 		  </div>
 	  </div>
 	  <hr>

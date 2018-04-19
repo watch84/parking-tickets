@@ -17,6 +17,7 @@ p{
 
 ul{
 	list-style: none;
+	padding:0px;
 }
 
 .header h1{
@@ -38,11 +39,13 @@ ul{
 }
 
 .btn-primary{
-	background:#00ccff !important;
+	background:#1a98e9 !important;
 	border:0px;
-	font-size: 22px;
+	padding: 13px 33px;
+	font-size: 28px;
+	font-weight: bold;
 	text-shadow: none;
-	font-family: 'Days One', sans-serif;
+	font-family: 'Maven Pro', sans-serif;
 }
 
 
@@ -50,13 +53,58 @@ ul{
 .container .jumbotron, .container-fluid .jumbotron{
 	border-radius: 0px;
 	padding:40px 30px;
-	background-color: #f7f7f7;
-	box-shadow: 0px 20px 30px -10px #b1b1b1;
+	background-color: #fff;
+	box-shadow:0px 20px 80px -10px #b1b1b1;
 }
 
 .jumbotron p{
-	    font-size: 24px;
-	    margin-bottom: 26px;
+	font-size: 22px;
+    margin-bottom: 26px;
+	    
+}
+
+.street-message{
+	font-weight: 400;
+}
+
+.current-rule-container{
+/*
+	background-color: #fff;
+    box-shadow: 0px 20px 80px -10px #b1b1b1;
+    padding:20px;
+*/
+
+    padding: 10px 0px;
+}
+
+.current-rule{
+	font-weight: bold;
+	color:#d85454;
+	font-size: 26px;
+	margin-bottom: 0px;
+}
+
+.rule-support{
+	font-size: 16px;
+    font-weight: 800;
+}
+
+.message{
+font-size: 62px;
+    color: #d85454;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.message-good .current-rule, .message-good .message{
+	color:#1a98e9;
+}
+
+
+.response-container ul{
+	    background-color: #fff;
+    box-shadow: 0px 20px 80px -10px #b1b1b1;
+    padding: 45px;
 }
 
 input.form-control{
@@ -64,8 +112,17 @@ input.form-control{
 	height:50px;
 }
 
+.storedfields{
+	display: none;
+}
+
 .max-height, #map{
     height: 100vh;
+}
+
+.notice{
+	font-size: 12px;
+	color:#aaa;
 }
 
 .map-overlay {

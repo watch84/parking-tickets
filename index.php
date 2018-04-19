@@ -14,19 +14,19 @@
     </div>
 
     <div class="jumbotron text-center">
-        <p class="lead">Enter the street address you are closest to</p>
+        <p class="lead">Enter the street address of the side of the street you're on. <br/> We'll look at City Data to calculate the rules for your location.</p>
         <form action="response.php" method="post">
-            <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Street address...">
+            <input type="text" class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Enter street address closest to you...">
             <br/>
 
-            <div class="col-12">
+            <div class="col-12 storedfields">
                 <label>Street Address</label>
                 <input class="d-inline-block field" id="street_number" name="add_num" disabled="true">
                 <input class="d-inline-block field" id="route" name="add_street" disabled="true">
                 <input class="d-inline-block field" id="postal_code" name="zip" disabled="true">
             </div>
 
-            <input class="btn btn-primary mt-5" type="submit" name="submit" value="Get Parking Rules">
+            <input class="btn btn-primary mt-1" type="submit" name="submit" value="Find Parking Rules">
         </form>
 
 

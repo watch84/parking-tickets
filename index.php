@@ -26,7 +26,7 @@
     <div class="jumbotron text-center">
         <p class="lead">Enter the street address of the side of the street you're on. <br/> <br/> We'll look at Buffalo City Data to calculate the rules for your location.</p>
         <form action="response.php" method="post">
-            <input type="text" autofocus class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Enter street address closest to you...">
+            <input type="text" autofocus class="form-control" id="autocomplete" onFocus="geolocate()" placeholder="Enter address closest to you...">
             <br/>
 
             <div class="col-12 storedfields">

@@ -26,7 +26,7 @@
 
             <p class="message">
                 <!-- .message-good on co	PARKING AVAILABLE -->
-                NO PARKING
+                PAID PARKING
             </p>
             <?php
 		          ini_set('display_errors', 1);
@@ -67,12 +67,16 @@
                             <?php echo date("g:i a", strtotime($untimes['Wed']['maxtime']))?>
                         </p>
                     </li>
-                    <li class="current-rule-container">
-                        <p class="current-rule">Thursday:
+<!--
+                     <li class="current-rule-container">
+                        <p class="current-rule">
+-->
+                    <li>
+                        <p>Thursday:
                             <?php echo date("g:i a", strtotime($untimes['Thu']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Thu']['maxtime']))?>
                         </p>
-                        <p class="rule-support">It's currently Thursday at 3:47 PM.</p>
+<!--                         <p class="rule-support">It's currently Thursday at 3:47 PM.</p> -->
                     </li>
                     <li>
                         <p>Friday:
@@ -150,16 +154,22 @@
                 </ul>
 
 
-
         </div>
+
+        <div class="col-sm-12 text-center">
+			<a href="https://buffaloroam.ppprk.com/park/" target="_blank" class="btn btn-primary mt-4 mb-4">Park with Buffalo Roam &raquo;</a>
+        </div>
+		<div class="col-sm-12 mt-4 mb-5">
+			<h4>Get a text when it's time to switch sides</h4>
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Enter phone number..." aria-label="Text alerts" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button">Send me Alerts</button>
+				</div>
+			</div>
+		</div>
         <div class="col-sm-12">
-            <p class="notice">All calculations have been made using summons data collected during parking violations. Park smarter.</p>
-        </div>
-        <div class="col-sm-12 parking-response">
-
-            <div class="col-sm-12">
-
-            </div>
+            <p class="notice">The times listed above are the range of time when tickets were given. All calculations have been made using <a href="https://data.buffalony.gov/Transportation/Parking-Summonses/yvvn-sykd" target="_blank">summons data collected during parking violations.</a> Park smarter.</p>
         </div>
     </div>
 

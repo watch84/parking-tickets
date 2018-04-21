@@ -15,6 +15,7 @@
     function init() {
     // Clear forms here
     document.getElementById("searchTextField").value = "";
+    document.getElementById("street_number").value = "";
 }
 window.onload = init;
 </script>

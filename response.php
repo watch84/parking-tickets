@@ -164,10 +164,37 @@
 			<div class="input-group mb-3">
 				<input type="text" class="form-control" placeholder="Enter phone number..." aria-label="Text alerts" aria-describedby="basic-addon2">
 				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="button">Send me Alerts</button>
+					<button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" type="button">Send me Alerts</button>
 				</div>
 			</div>
 		</div>
+		
+
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Sorry but this feature isn't ready yet. We're still building. You'll be one of the first to know when it's ready. </h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+<!--
+		      <div class="modal-body">
+		        ...
+		      </div>
+-->
+		      <div class="modal-footer">
+		        <button type="button" data-dismiss="modal" class="btn btn-primary">Stay tuned!</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		
         <div class="col-sm-12">
             <p class="notice">The times listed above are the range of time when tickets were given. All calculations have been made using <a href="https://data.buffalony.gov/Transportation/Parking-Summonses/yvvn-sykd" target="_blank">summons data collected during parking violations.</a> Park smarter.</p>
         </div>

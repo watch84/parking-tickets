@@ -115,8 +115,8 @@ function searches(){
         ),
         'paint' => array(
             'circle-radius' => 4,
-            'circle-color' => "#004e83",
-            'circle-stroke-color' => "#004e83",
+            'circle-color' => "#1a98e9",
+            'circle-stroke-color' => "#1a98e9",
             'circle-stroke-opacity' => 0.2,
             'circle-stroke-width'=> 8,
         )

@@ -31,7 +31,7 @@
                 $fetch = "SELECT * FROM parking_times";
 
                 $today = date("D");
-                $time = date("h:i");
+                $time = date("H:i a");
 
                 $result = $con->query($fetch);
                 $add_street = $_POST['add_street'];
@@ -44,13 +44,18 @@
                 if($street == $streetname){
                     $times = $row['parking_time'];
                     $untimes = json_decode($times,true);
-            ?>
-
-            <?php /* if ($time > $untimes[$today]['mintime']) && ($time < $untimes[$today]['maxtime']) { ?>
-                <p class="message">TRUE!</p>
-            <?php  } else { ?>
-                <p class="message">FALSE!</p>
-            <?php } */ ?>
+            
+            
+                    
+            if (isset($untimes[$today])){ 
+               if ($time > date("H:i a", strtotime($untimes[$today]['mintime'])) && $time < date("H:i a", strtotime($untimes[$today]['maxtime']))) { ?>
+                <p class="message">PAY TO PARK</p>
+                <?php } else{ ?>
+                <p class="message-good">FREE PARKING</p>
+                <?php  } ?>
+                <?php } elseif(!isset($untimes[$today])) {?>
+                <p class="message-good">FREE PARKING</p>
+                <?php } ?>
 
                 <ul>
                     <?php if(isset($untimes['Mon'])) { ?>
@@ -163,41 +168,41 @@
         </div>
 
         <div class="col-sm-12 text-center">
-			<a href="https://buffaloroam.ppprk.com/park/" target="_blank" class="btn btn-primary mt-4 mb-4">Park with Buffalo Roam &raquo;</a>
+            <a href="https://buffaloroam.ppprk.com/park/" target="_blank" class="btn btn-primary mt-4 mb-4">Park with Buffalo Roam &raquo;</a>
         </div>
-		<div class="col-sm-12 mt-4 mb-5">
-			<h4>Get a text when it's time to switch sides</h4>
-			<div class="input-group mb-3">
-				<input type="text" class="form-control" placeholder="Enter phone number..." aria-label="Text alerts" aria-describedby="basic-addon2">
-				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" type="button">Send me Alerts</button>
-				</div>
-			</div>
-		</div>
+        <div class="col-sm-12 mt-4 mb-5">
+            <h4>Get a text when it's time to switch sides</h4>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter phone number..." aria-label="Text alerts" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" type="button">Send me Alerts</button>
+                </div>
+            </div>
+        </div>
 
 
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Sorry but this feature isn't ready yet. We're still building. You'll be one of the first to know when it's ready. </h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sorry but this feature isn't ready yet. We're still building. You'll be one of the first to know when it's ready. </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
-		      </div>
-<!--
+                    </div>
+                    <!--
 		      <div class="modal-body">
 		        ...
 		      </div>
 -->
-		      <div class="modal-footer">
-		        <button type="button" data-dismiss="modal" class="btn btn-primary">Stay tuned!</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-primary">Stay tuned!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

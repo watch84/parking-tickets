@@ -118,8 +118,12 @@ font-weight: 800;
 line-height: 52px;
 }
 
-.message-good .current-rule, .message-good .message{
+.message-good .current-rule, .message-good{
 	color:#1a98e9;
+    font-size: 48px;
+margin: 0px 0px 40px 0px;
+font-weight: 800;
+line-height: 52px;
 }
 
 

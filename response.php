@@ -44,11 +44,9 @@
                 if($street == $streetname){
                     $times = $row['parking_time'];
                     $untimes = json_decode($times,true);
-            
-            
                     
             if (isset($untimes[$today])){ 
-               if ($time > date("H:i a", strtotime($untimes[$today]['mintime'])) && $time < date("H:i a", strtotime($untimes[$today]['maxtime']))) { ?>
+               if ($time >= date("H:i a", strtotime($untimes[$today]['mintime'])) && $time <= date("H:i a", strtotime($untimes[$today]['maxtime']))) { ?>
                 <p class="message">PAY TO PARK</p>
                 <?php } else{ ?>
                 <p class="message-good">FREE PARKING</p>

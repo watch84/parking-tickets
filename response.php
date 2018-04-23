@@ -23,10 +23,6 @@
         </div>
         <div class="col-sm-12">
 
-            <p class="message">
-                <!-- .message-good on co	PARKING AVAILABLE -->
-                PAID PARKING
-            </p>
             <?php
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
@@ -34,18 +30,28 @@
 
                 $fetch = "SELECT * FROM parking_times";
 
+                $today = date("D");
+                $time = date("h:i");
+
                 $result = $con->query($fetch);
                 $add_street = $_POST['add_street'];
                 $street = strtolower(preg_replace('/\W\w+\s*(\W*)$/', '$1', $add_street));
 
                 while($row = $result->fetch_assoc()) {
 
-                    $streetname = strtolower($row['streetname']);
+                $streetname = strtolower($row['streetname']);
 
-                    if($street == $streetname){
-                        $times = $row['parking_time'];
-                        $untimes = json_decode($times,true);
+                if($street == $streetname){
+                    $times = $row['parking_time'];
+                    $untimes = json_decode($times,true);
             ?>
+
+            <?php /* if ($time > $untimes[$today]['mintime']) && ($time < $untimes[$today]['maxtime']) { ?>
+                <p class="message">TRUE!</p>
+            <?php  } else { ?>
+                <p class="message">FALSE!</p>
+            <?php } */ ?>
+
                 <ul>
                     <?php if(isset($untimes['Mon'])) { ?>
                     <li>

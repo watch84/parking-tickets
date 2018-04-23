@@ -10,8 +10,7 @@
         <!--
         <a href="/">
 	        <img class="logo" src="/img/logo.svg" alt="">
-        </a>
--->
+        </a> -->
     </div>
     <div class="row response-container">
         <div class="col-sm-12">
@@ -29,90 +28,91 @@
                 PAID PARKING
             </p>
             <?php
-		          ini_set('display_errors', 1);
-		          ini_set('display_startup_errors', 1);
-		          error_reporting(E_ALL);
-		
-		          $fetch = "SELECT * FROM parking_times";
-		
-		          $result = $con->query($fetch);
-                  $add_street = $_POST['add_street'];
-                  $street = strtolower(preg_replace('/\W\w+\s*(\W*)$/', '$1', $add_street));
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
 
-                  while($row = $result->fetch_assoc()) {
-                      
-                      $streetname = strtolower($row['streetname']);
-                      
-                      if($street == $streetname){
-                          $times = $row['parking_time'];
-                          $untimes = json_decode($times,true);
-//    
-                          ?>
+                $fetch = "SELECT * FROM parking_times";
+
+                $result = $con->query($fetch);
+                $add_street = $_POST['add_street'];
+                $street = strtolower(preg_replace('/\W\w+\s*(\W*)$/', '$1', $add_street));
+
+                while($row = $result->fetch_assoc()) {
+
+                    $streetname = strtolower($row['streetname']);
+
+                    if($street == $streetname){
+                        $times = $row['parking_time'];
+                        $untimes = json_decode($times,true);
+            ?>
                 <ul>
+                    <?php if(isset($untimes['Mon'])) { ?>
                     <li>
                         <p>Monday:
                             <?php echo date("g:i a", strtotime($untimes['Mon']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Mon']['maxtime']))?>
                         </p>
                     </li>
+                    <?php } if(isset($untimes['Tue'])) { ?>
                     <li>
                         <p>Tuesday:
                             <?php echo date("g:i a", strtotime($untimes['Tue']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Tue']['maxtime']))?>
                         </p>
                     </li>
+                    <?php } if(isset($untimes['Wed'])) { ?>
                     <li>
                         <p>Wednesday:
                             <?php echo date("g:i a", strtotime($untimes['Wed']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Wed']['maxtime']))?>
                         </p>
                     </li>
-<!--
-                     <li class="current-rule-container">
-                        <p class="current-rule">
--->
+                    <?php } if(isset($untimes['Thu'])) { ?>
                     <li>
                         <p>Thursday:
                             <?php echo date("g:i a", strtotime($untimes['Thu']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Thu']['maxtime']))?>
                         </p>
-<!--                         <p class="rule-support">It's currently Thursday at 3:47 PM.</p> -->
                     </li>
+                    <?php } if(isset($untimes['Fri'])) { ?>
                     <li>
                         <p>Friday:
                             <?php echo date("g:i a", strtotime($untimes['Fri']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Fri']['maxtime']))?>
                         </p>
                     </li>
+                    <?php } if(isset($untimes['Sat'])) { ?>
                     <li>
                         <p>Saturday:
                             <?php echo date("g:i a", strtotime($untimes['Sat']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Sat']['maxtime']))?>
                         </p>
                     </li>
+                    <?php } if(isset($untimes['Sun'])) { ?>
                     <li>
                         <p>Sunday:
                             <?php echo date("g:i a", strtotime($untimes['Sun']['mintime']))?> -
                             <?php echo date("g:i a", strtotime($untimes['Sun']['maxtime']))?>
                         </p>
                     </li>
-
                     <?php
+                        }
                       }
                   }
-                  
-		
+
+
 //		          if ($result->num_rows > 0) {
 //		              // output data of each row
 //		              while($row = $result->fetch_assoc()) {
 //		                  $today = date("D");
-//		
+//
 //		                  $street = $row["streetname"];
 //		                  $street = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($street))));
-//		
+//
 //		                  $string = $row["parking_time"];
 //		                  $json = json_decode($string, true);
-//		
+//
 //		                  echo $street. "<br>";
 //		                  echo $today. "<br>";
 //		                  // print_r($json);
@@ -125,11 +125,11 @@
 //		          } else {
 //		              echo "No Results.";
 //		          }
-		
+
 		          $con->close();
 		          ?>
                         <!--
-				  
+
 				  <select>
 					  <option>English &#8675;</option>
 					  <option>Spanish</option>
@@ -168,9 +168,9 @@
 				</div>
 			</div>
 		</div>
-		
 
-		
+
+
 		<!-- Modal -->
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
@@ -192,9 +192,9 @@
 		    </div>
 		  </div>
 		</div>
-		
-		
-		
+
+
+
         <div class="col-sm-12">
             <p class="notice">The times listed above are the range of time when tickets were given. All calculations have been made using <a href="https://data.buffalony.gov/Transportation/Parking-Summonses/yvvn-sykd" target="_blank">summons data collected during parking violations.</a> Park smarter.</p>
         </div>

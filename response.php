@@ -171,7 +171,7 @@
             <a href="https://buffaloroam.ppprk.com/park/" target="_blank" class="btn btn-primary mt-4 mb-4">Park with Buffalo Roam &raquo;</a>
         </div>
         <div class="col-sm-12 mt-4 mb-5">
-            <h4>Get a text when it's time to switch sides</h4>
+            <h4>Get a text when it's time to move.</h4>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Enter phone number..." aria-label="Text alerts" aria-describedby="basic-addon2">
                 <div class="input-group-append">

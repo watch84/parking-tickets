@@ -32,7 +32,7 @@ window.onload = init;
     </div>
 
     <div class="jumbotron text-center">
-        <p class="lead">Enter the street address of current location. <br/> <br/> We'll look at Buffalo City Data to calculate the rules for your location.</p>
+        <p class="lead"><br/> We'll look at Buffalo City Data to calculate the meter times for your location.</p>
 
         <div class="col-12">
             <div class="form-group">

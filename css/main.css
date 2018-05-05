@@ -19,6 +19,9 @@ max-width: 300px;
     margin: 0px auto 0px;
 }
 
+.tooltip-inner {
+    font-size:10px;
+}
 
 
 .navbar-brand{

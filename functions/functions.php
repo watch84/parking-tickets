@@ -48,14 +48,6 @@ function createRows(){
         $query .= " VALUES ('$add_num', '$add_street', '$zip', '$lng', '$lat', '$date')"; 
 
         $result = mysqli_query($con, $query);
-/*
-
-        if(!$result){
-            die('Query failed.' . mysqli_error($con));
-        } else{
-            echo "Record created!";
-        }
-*/
     }
 }
 
@@ -125,5 +117,4 @@ function searches(){
     echo json_encode($allPoints, JSON_PRETTY_PRINT);
 };
 
-//searches();
 ?>

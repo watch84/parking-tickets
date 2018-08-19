@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('mysql.parkbflo.com', 'bufpark', '2RAu6BBXugEB7vDy', 'parking_data');
+$con = mysqli_connect('mysql.parkbflo.com', 'bufpark', 'jP@cF3^yMZ?xAvr$', 'parking_data');
     
     if(!$con){
         die("Database connection failed.");
